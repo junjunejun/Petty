@@ -1,1 +1,1 @@
-# PetsHuggy
+# Pets
