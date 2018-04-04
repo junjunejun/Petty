@@ -22,15 +22,8 @@ gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
 
 
-group :production do
-  gem 'pg'
-  gem 'rails_12factor'
-end
-
-group :development, :test do
-  gem 'sqlite3'
-end
-
+gem 'sqlite3', groups: %w(test development), require: false
+gem 'pg', groups: %w(production), require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
