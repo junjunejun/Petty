@@ -22,7 +22,7 @@ gem "figaro", "~> 1.1.0"
 
 
 gem 'sqlite3', groups: %w(test development), require: false
-gem 'pg', groups: %w(production), require: false
+gem 'pg', '~> 0.19.0', groups: %w(production), require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
