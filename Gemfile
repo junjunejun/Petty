@@ -17,6 +17,7 @@ gem 'toastr-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem "paperclip", "~> 6.0.0"
+gem 'aws-sdk', '~> 2.3'
 gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
 
