@@ -1,0 +1,18 @@
+commonHeaderCallBack({
+	"data": [
+		{
+			"endDate": "2018-03-27 00:00:00",
+			"id": 5,
+			"link": "http://r.ca-mpr.jp/s/10/?i4a=396885",
+			"startDate": "2018-03-26 00:00:00",
+			"title": "コイン最大30％増量"
+		},
+		{
+			"endDate": "2018-04-02 00:00:00",
+			"id": 6,
+			"link": "http://r.ca-mpr.jp/s/10/?i4a=396897",
+			"startDate": "2018-03-31 18:00:00",
+			"title": "コイン最大50%増量"
+		}
+	]
+});
