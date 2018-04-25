@@ -17,13 +17,24 @@ gem 'toastr-rails'
 gem 'omniauth'
 gem 'omniauth-google-oauth2'
 gem "paperclip", "~> 6.0.0"
-gem 'aws-sdk', '~> 2.3'
 gem 'dropzonejs-rails'
 gem "figaro", "~> 1.1.0"
 
+gem 'aws-sdk-s3'
 
-gem 'sqlite3', groups: %w(test development), require: false
-gem 'pg', '~> 0.19.0', groups: %w(production), require: false
+gem 'geocoder'
+gem 'jquery-ui-rails'
+gem 'stripe'
+gem 'rest-client'
+
+group :production do
+	gem 'pg'
+	gem 'rails_12factor'
+end
+
+group :development, :test do
+	gem 'sqlite3'
+end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

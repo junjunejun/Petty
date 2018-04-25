@@ -16,6 +16,15 @@ resources :photos, only: [:create, :destroy] do
   end
 end
 
+resources :listings do
+  resources :reservations, only: [:new, :create]
+end
+
+get '/setdate' => 'reservations#setdate'
+get '/duplicate' => 'reservations#duplicate'
+get '/reservations' => 'reservations#index'
+get '/reserved' => 'reservations#reserved'
+
 get 'manage_listing/:id/basics' => 'listings#basics', as: 'manage_listing_basics'
 get 'manage_listing/:id/description' => 'listings#description', as: 'manage_listing_description'
 get 'manage_listing/:id/address' => 'listings#address', as: 'manage_listing_address'
@@ -25,6 +34,10 @@ get 'manage_listing/:id/calender' => 'listings#calender', as: 'manage_listing_ca
 get 'manage_listing/:id/bankaccount' => 'listings#bankaccount', as: 'manage_listing_bankaccount'
 get 'manage_listing/:id/publish' => 'listings#publish', as: 'manage_listing_publish'
 
+#stripe connect oauth path
+get '/connect/oauth' => 'stripe#oauth', as: 'stripe_oauth'
+get '/connect/confirm' => 'stripe#confirm', as: 'stripe_confirm'
+get '/connect/deauthorize' => 'stripe#deauthorize', as: 'stripe_deauthorize'
 
 
 end
